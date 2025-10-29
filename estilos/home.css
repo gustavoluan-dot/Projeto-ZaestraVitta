@@ -12,6 +12,7 @@ body {
   padding-top: 100px;
 }
 
+/* ---------- CABEÇALHO ---------- */
 .header-principal {
   position: fixed;
   top: 0;
@@ -35,15 +36,13 @@ body {
   transform: scale(1.05);
 }
 
-#menu-toggle {
-  display: none;
-}
-
+/* Ícone hamburguer */
 .menu-icon {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 1100;
 }
 
 .menu-icon span {
@@ -51,8 +50,10 @@ body {
   height: 4px;
   width: 25px;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
+/* Navbar */
 .navbar .menu-links {
   list-style: none;
   display: flex;
@@ -70,6 +71,7 @@ body {
   color: #FFD700;
 }
 
+/* ---------- CONTEÚDO PRINCIPAL ---------- */
 .banner-principal {
   background-color: #ffffff;
   padding: 40px 20px;
@@ -124,7 +126,6 @@ body {
   width: 140px;
   height: auto;
   object-fit: contain;
-  image-rendering: auto;
   transition: transform 0.3s ease;
 }
 
@@ -138,6 +139,7 @@ body {
   margin-top: 12px;
 }
 
+/* ---------- PRODUTOS ---------- */
 .produtos-destaque {
   background-color: #F0F3FF;
   padding: 40px 20px;
@@ -180,7 +182,6 @@ body {
   width: 220px;
   height: 220px;
   object-fit: contain;
-  image-rendering: auto;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
@@ -195,6 +196,7 @@ body {
   text-align: center;
 }
 
+
 footer {
   background-color: #007F48;
   color: #F0F3FF;
@@ -204,46 +206,51 @@ footer {
   margin-top: 50px;
 }
 
-
 @media (max-width: 768px) {
-  .navbar .menu-links {
-    display: none;
-    flex-direction: column;
-    background-color: #007F48;
-    position: absolute;
-    top: 100px;
-    right: 40px;
-    width: 200px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-
-  #menu-toggle:checked + .menu-icon + .navbar .menu-links {
-    display: flex;
-  }
-
   .menu-icon {
     display: flex;
   }
 
-  .header-principal {
+  .navbar {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    width: 100%;
+    background-color: #007F48;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px 0;
   }
 
-  .logo {
-    margin-bottom: 10px;
+  .navbar.ativo {
+    display: flex;
+    animation: fadeIn 0.3s ease;
   }
 
-  .cartao-produto {
-    min-height: auto;
+  .navbar .menu-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
-  .cartao-produto img {
-    width: 180px;
-    height: 180px;
+  .menu-icon.ativo span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .menu-icon.ativo span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.ativo span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .header-principal {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .vantagens-grade {
@@ -252,5 +259,10 @@ footer {
 
   .vantagem-item img {
     width: 120px;
+  }
+
+  .cartao-produto img {
+    width: 180px;
+    height: 180px;
   }
 }
