@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato: Conheça melhor a ZaestraVitta e seus colaboradores.</title>
+    <link rel="shortcut icon" href="./imagens/icone-zaestravitta.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos/contato.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            <a href="home.html" target="_self">
+                <img src="imagens/icone-zaestravitta1.png" alt="Logo da ZaestraVitta, voltando para página inicial">
+            </a>
+        </h1>
+
+        <nav>
+
+            <ul>
+                <li><a href="home.html" target="_self">INÍCIO</a></li>
+                <li><a href="produtos.html" target="_self">NOSSOS PRODUTOS</a></li>
+                <li><a href="sobre.html" target="_self">SOBRE NÓS</a></li>
+                <li><a href="videos.html" target="_self">VÍDEOS APLICANDO</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="cor">
+            <h1>Fale com a ZaestraVitta</h1>
+            <p>Preencha o formulário abaixo ou utilize nossos canais diretos para um atendimento rápido.</p>
+        </section>
+
+        <section>
+
+            <div>
+       
+
+                <form action="enviar.php" method="POST">
+
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="" disabled selected>Escolha o motivo do contato</option>
+                            <option value="duvidas">Dúvidas sobre Produtos</option>
+                            <option value="comercial">Interesse em Revenda</option>
+                            <option value="outro">Outros Assuntos</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <aside>
+                <section class="canais-atendimento">
+                    <h2>Canais de Atendimento</h2>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/5511953566646"
+                                target="_blank">(11) 95356-6646</a></li>
+                        <li><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/rapidaoplusz3"
+                                target="_blank">@rapidaoplusz3</a></li>
+                        <li><i class="fas fa-envelope"></i> E-mail: <a
+                                href="mailto:contato@zaestravitta.com.br">contato@zaestravitta.com.br</a></li>
+                    </ul>
+                </section>
+
+                </address>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; <i>Todos os direitos reservados - Pixelar</i>
+    </footer>
+
+</body>
+
+</html>

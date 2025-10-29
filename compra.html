@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar: Adquira o seu produto ZaestraVitta</title>
+    <link rel="shortcut icon" href="./imagens/icone-zaestravitta.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/compra.css">
+</head>
+<body>
+    <header>
+        
+        <h1>
+            <a href="home.html" target="_self">
+                <img src="imagens/icone-zaestravitta1.png" alt="Logo da ZaestraVitta, voltando para página inicial">
+            </a>
+        </h1>
+
+    </header>
+
+    <main>
+
+
+    <section>
+        <h2>Dados para Entrega e Pagamento</h2>
+        
+        <form method="POST">
+            
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <div><label for="nome">Nome Completo:</label><input type="text" id="nome" name="nome" required></div>
+                <div><label for="email">E-mail:</label><input type="email" id="email" name="email" required></div>
+                <div><label for="tel">Telefone:</label><input type="tel" id="tel" name="telefone" placeholder="(XX) XXXXX-XXXX"></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+                <div><label for="cep">CEP:</label><input type="text" id="cep" name="cep" required></div>
+                <div><label for="rua">Rua/Avenida:</label><input type="text" id="rua" name="rua" required></div>
+                <div><label for="numero">Número:</label><input type="text" id="numero" name="numero" required></div>
+                <div><label for="complemento">Complemento:</label><input type="text" id="complemento" name="complemento"></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Forma de Pagamento</legend>
+
+                <div>
+                    <input type="radio" id="pix" name="pagamento">
+                    <label for="pix">PIX</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="din" name="pagamento">
+                    <label for="din">Dinheiro</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="cartao" name="pagamento">
+                    <label for="cartao">Cartão de Crédito</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="cartao02" name="pagamento">
+                    <label for="cartao02">Cartão de Débito</label>
+                </div> 
+
+                
+            </fieldset>
+
+            <button type="submit">Finalizar Compra e Pagar</button>
+
+        </form>
+    </section>
+
+</main>
+
+    <footer>
+        &copy; <i>Todos os direitos reservados - Pixelar</i>
+    </footer>
+
+</body>
+</html>

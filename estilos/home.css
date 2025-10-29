@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #F0F3FF;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 100px;
+}
+
+.header-principal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #007F48;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  background-color: white;
+  height: 4px;
+  width: 25px;
+  border-radius: 2px;
+}
+
+.navbar .menu-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu-links li a {
+  text-decoration: none;
+  color: #F0F3FF;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-links li a:hover {
+  color: #FFD700;
+}
+
+.banner-principal {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.img-produto-banner {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.banner-principal h2 {
+  font-size: 1.8rem;
+  color: #007F48;
+}
+
+.banner-secundario {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.mensagem-destaque-faixa h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #007F48;
+}
+
+.vantagens-grade {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.vantagem-item {
+  text-align: center;
+  max-width: 280px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vantagem-item:hover {
+  transform: scale(1.03);
+}
+
+.vantagem-item img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  image-rendering: auto;
+  transition: transform 0.3s ease;
+}
+
+.vantagem-item img:hover {
+  transform: scale(1.05);
+}
+
+.vantagem-item h3 {
+  font-size: 1.1rem;
+  color: #007F48;
+  margin-top: 12px;
+}
+
+.produtos-destaque {
+  background-color: #F0F3FF;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.produtos-destaque h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #007F48;
+}
+
+.grade-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.cartao-produto-link {
+  text-decoration: none;
+}
+
+.cartao-produto {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+}
+
+.cartao-produto:hover {
+  transform: scale(1.03);
+}
+
+.cartao-produto img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  image-rendering: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.cartao-produto:hover img {
+  transform: scale(1.05);
+}
+
+.cartao-produto h3 {
+  font-size: 1.2rem;
+  color: #007F48;
+  text-align: center;
+}
+
+footer {
+  background-color: #007F48;
+  color: #F0F3FF;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar .menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: #007F48;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  #menu-toggle:checked + .menu-icon + .navbar .menu-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  .header-principal {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .cartao-produto {
+    min-height: auto;
+  }
+
+  .cartao-produto img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .vantagens-grade {
+    gap: 20px;
+  }
+
+  .vantagem-item img {
+    width: 120px;
+  }
+}
