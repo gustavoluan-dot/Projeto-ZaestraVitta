@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f0f3ff;
@@ -7,20 +13,19 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* CORREÇÃO APLICADA: Esconde a rolagem horizontal */
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
-/* ======= CABEÇALHO (AJUSTADO: Mais padding) ======= */
+/* ======= CABEÇALHO ======= */
 header {
     background-color: #007f48;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Aumentei o padding vertical de 5px para 10px */
-    padding: 10px 10px; 
+    padding: 10px 10px;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .foto-destaque {
@@ -42,8 +47,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-    /* Adicionei padding para aumentar a área clicável dos links */
-    padding: 8px 10px; 
+    padding: 8px 10px;
     display: inline-block;
 }
 
@@ -51,118 +55,45 @@ header nav ul li a:hover {
     color: yellow;
 }
 
-/* ======= MENU HAMBURGUER (Estilos para o ícone) ======= */
+/* ======= MENU HAMBÚRGUER ======= */
 .menu-toggle {
-    display: none; /* Esconde no desktop */
-    font-size: 30px;
-    cursor: pointer;
+    display: none;
+    font-size: 28px;
     color: white;
-    background: none;
-    border: none;
-    padding: 10px;
-    /* Ajuste para alinhar o ícone quando a tela diminui */
-    align-self: center; 
+    cursor: pointer;
 }
 
-
-/* REGRAS PARA TELAS MENORES QUE 768px (TABLET/CELULAR) */
-@media (max-width: 768px) {
-    header {
-        /* Permite que o logo e o botão de menu fiquem na mesma linha */
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    /* Mostra o ícone do menu hambúrguer */
-    .menu-toggle {
-        display: block; 
-    }
-
-    /* Oculta o menu de navegação por padrão em telas pequenas */
-    header nav {
-        flex-direction: column;
-        width: 100%;
-        background-color: #007f48;
-        text-align: center;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-out; /* animação suave para fechar */
-        /* Garante que o nav ocupe a largura total e fique abaixo do cabeçalho */
-        order: 10; 
-        /* Adicionando position: absolute para que ele caia por baixo do cabeçalho e não cause rolagem */
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-    
-    /* Mostra o menu quando a classe 'show' é adicionada pelo JS */
-    header nav.show {
-        max-height: 300px; /* altura suficiente para os itens */
-        transition: max-height 0.4s ease-in; /* animação suave para abrir */
-    }
-    
-    header nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    /* Aumentei o padding dos itens da lista no menu mobile para ficarem maiores */
-    header nav ul li {
-        padding: 12px 0; /* Aumentado de 10px para 12px */
-        border-top: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    
-    /* Remove o padding extra que havíamos colocado no link para não duplicar no mobile */
-    header nav ul li a {
-        padding: 0;
-    }
-}
-
-
-/* ======= CONTEÚDO PRINCIPAL E PRODUTOS (Sem alterações aqui) ======= */
+/* ======= CONTEÚDO PRINCIPAL ======= */
 main {
     padding: 40px;
     flex: 1;
 }
 
-/* Para a primeira section que contém o texto introdutório (bloco de texto grande) */
-section:first-child {
-    display: block;
-    margin-bottom: 30px;
-}
-
+/* Bloco introdutório */
 section:first-child article {
     background-color: white;
-    /* REMOVEMOS A BORDA E SOMBRA para que ele se pareça mais com um bloco de texto normal e não um card */
-    border: none; 
+    border: none;
     box-shadow: none;
     border-radius: 10px;
-    
     padding: 20px;
-    /* Aumenta a largura para ocupar quase todo o espaço da main */
-    width: 100%; 
-    max-width: 1000px; /* Limite para não esticar demais em monitores gigantes */
-    margin: 0 auto;
-    min-height: auto;
-    display: block;
-    text-align: center; /* Centraliza o texto, como na imagem que você enviou */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    text-align: center;
 }
 
 section:first-child article h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    text-align: center; 
+    color: #007f48;
 }
 
 section:first-child article p {
     font-size: 1em;
     line-height: 1.5em;
-    text-align: center; 
 }
 
-
-/* Para a segunda section que contém os cards dos produtos */
+/* Cards dos produtos */
 section:last-child {
     display: flex;
     flex-wrap: wrap;
@@ -171,14 +102,13 @@ section:last-child {
     text-align: center;
 }
 
-/* Estilo para os cards de produto */
 article {
     background-color: white;
     border: 2px solid #007f48;
     border-radius: 10px;
     box-shadow: 0 0 6px rgba(0,0,0,0.1);
     padding: 10px;
-    width: 220px; /* Largura padrão para telas maiores */
+    width: 220px;
     min-height: 320px;
     display: flex;
     flex-direction: column;
@@ -219,26 +149,6 @@ article a:hover {
     color: #007f48;
 }
 
-/* REGRAS ESPECÍFICAS PARA TELAS PEQUENAS (CELULAR - Abaixo de 600px) */
-@media (max-width: 600px) {
-    main {
-        padding: 20px;
-    }
-    
-    /* Para o primeiro artigo (o texto grande sobre os produtos) */
-    section:first-child article {
-        width: 100%;
-        max-width: none;
-        padding: 15px 5px; /* Reduzindo o padding horizontal no celular */
-    }
-    
-    /* Os cards de produto ocupam quase a largura toda da tela no celular */
-    section:last-child article {
-        width: 90%; 
-        max-width: 300px;
-    }
-}
-
 /* ======= RODAPÉ ======= */
 footer {
     background-color: #007f48;
@@ -247,4 +157,59 @@ footer {
     padding: 15px;
     font-size: 15px;
     width: 100%;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        background-color: #007f48;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    header nav.show {
+        max-height: 300px;
+        transition: max-height 0.4s ease-in;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    header nav ul li a {
+        padding: 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section:first-child article {
+        width: 100%;
+        max-width: none;
+        padding: 15px 5px;
+    }
+
+    section:last-child article {
+        width: 90%;
+        max-width: 300px;
+    }
 }
