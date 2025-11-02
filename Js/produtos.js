@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menuBtn.addEventListener('click', () => {
             // Adiciona ou remove a classe 'show' no elemento <nav>
             menu.classList.toggle('show'); 
-            // Opcional: Adiciona a classe 'ativo' no botão (o que faz ele mudar de cor, por exemplo)
+            // Opcional: Adiciona a classe 'ativo' no botão se quiser mudar o ícone
             menuBtn.classList.toggle('ativo'); 
         });
     }

@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fundo principal claro */
+    background-color: #f0f3ff;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    /* Ajustado para compensar o header fixo */
+    padding-top: 110px; 
+    overflow-x: hidden;
+}
+
+/* Header (Cabeçalho) - CORRETO: LOGO ESQUERDA, MENU DIREITA */
+header {
+    /* Cor verde escura da ZaestraVitta */
+    background-color: #007f48;
+    padding: 10px 20px; /* Padronizado o padding */
+    display: flex;
+    /* CORRETO: LOGO ESQUERDA, MENU DIREITA SEMPRE */
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo */
+header a {
+    margin-right: 0; 
+}
+
+.logo-imagem {
+    height: 90px; /* Ajustado para 90px, nosso padrão */
+    width: auto; /* Deixa a largura automática */
+    object-fit: contain; /* Usa contain em vez de cover para não cortar o logo */
+    transition: transform 0.3s ease-in-out;
+}
+
+header a .logo-imagem:hover {
+    transform: scale(1.05);
+}
+
+/* Menu Hamburguer - PADRÃO IDÊNTICO */
+.menu-toggle {
+    display: none; /* Esconde no desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+/* Navegação */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+    /* Adicionado padding para aumentar a área clicável dos links */ 
+    padding: 8px 10px; 
+    display: inline-block;
+}
+
+header nav ul li a:hover {
+    color: yellow; /* Cor mais clara ao passar o mouse */
+}
+
+/* Main Content (Conteúdo Principal) */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Estilo para todas as sections dentro do main */
+main section {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra suave para o efeito "flutuante" */
+}
+
+/* Título Principal do Produto */
+main section:first-child h1 {
+    color: #007f48;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Layout do Produto (Imagens e Detalhes) */
+main section:first-child > article {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start; /* Alinha o topo */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Área das Imagens (article dentro de article) */
+main section:first-child > article > article:first-child {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    min-width: 200px; /* Garante que tenha espaço em telas menores */
+    justify-content: flex-end; /* Alinha as imagens para a direita em telas grandes */
+}
+
+/* Input/Labels das Imagens */
+main section:first-child > article > article:first-child input[type="radio"] {
+    display: none;
+}
+
+main section:first-child > article > article:first-child label {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+main section:first-child > article > article:first-child label:hover {
+    transform: scale(1.05);
+}
+
+main section:first-child label img {
+    width: 120px; 
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Destaque da Imagem Selecionada */
+main section:first-child input[type="radio"]:checked + label img {
+    border-color: #007f48;
+    box-shadow: 0 0 10px rgba(0, 127, 72, 0.6);
+    transform: scale(1.05);
+}
+
+/* Detalhes do Produto (a div com small, select e button) */
+main section:first-child > article > div {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+main section:first-child small {
+    color: #666;
+    font-size: 0.95rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* Opções de Volume (article com label e select) */
+main section:first-child > article > div > article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main section:first-child label {
+    color: #007f48;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+main section:first-child select {
+    padding: 0.8rem;
+    border: 2px solid #007f48;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main section:first-child select:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 127, 72, 0.2);
+}
+
+/* Botão de Compra */
+main section:first-child button {
+    background-color: #007f48;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+main section:first-child button:hover {
+    background-color: #006038;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 127, 72, 0.4);
+}
+
+/* Selo de Qualidade */
+main section:first-child section {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0; /* Remove padding extra do section container */
+    box-shadow: none; /* Remove sombra extra do section container */
+    background-color: transparent;
+}
+
+main section:first-child section img {
+    max-width: 90px; /* Tamanho razoável para o selo */
+    height: auto;
+}
+
+/* Seção de Descrição */
+main section:nth-child(2) h2 {
+    color: #007f48;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+main section:nth-child(2) p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lista de Recursos (Features) */
+main section:nth-child(2) article:nth-child(3) h3 {
+    color: #007f48;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* AJUSTADO: Usando max-width para forçar o item a ocupar menos espaço e centralizar melhor */
+main section:nth-child(2) ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px)); 
+    gap: 1.5rem;
+    justify-content: center; /* CENTRALIZA OS ITENS */
+}
+
+main section:nth-child(2) ul li {
+    background-color: #f0f3ff; /* Cor de fundo suave para os itens */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #007f48; /* Destaque verde */
+    font-size: 1rem;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:nth-child(2) ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main section:nth-child(2) ul li i {
+    color: #007f48;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-style: normal; /* Remove itálico se for um ícone de texto */
+}
+
+/* Seção de Instruções */
+main section:nth-child(3) h2 {
+    color: #007f48;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+/* Aviso (Texto P) */
+main section:nth-child(3) > p {
+    background-color: #fff3cd; /* Amarelo suave */
+    border-left: 5px solid #ffc107; /* Faixa amarela forte */
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #856404;
+    text-align: center;
+}
+
+/* Lista Ordenada de Instruções */
+main section:nth-child(3) ol {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main section:nth-child(3) ol li {
+    counter-increment: item;
+    margin-bottom: 1.5rem;
+    padding-left: 3rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilização do Número do Passo */
+main section:nth-child(3) ol li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #007f48;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+main section:nth-child(3) ol li strong {
+    color: #007f48;
+    font-weight: 700;
+}
+
+/* Footer (Rodapé) */
+footer {
+    background-color: #007f48;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer i {
+    font-style: normal;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* Design Responsivo para Mobile */
+@media (max-width: 768px) {
+    /* CABEÇALHO NO MOBILE */
+    header {
+        flex-direction: row;
+        /* CORRIGIDO: Logo Esquerda, Botão Hambúrguer Direita */
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 10px;
+        gap: 0;
+    }
+    
+    header a {
+        margin-right: 0; 
+    }
+
+    header .logo-imagem {
+        height: 70px;
+    }
+
+    /* Mostra o ícone do menu hambúrguer */
+    .menu-toggle {
+        display: block; 
+        align-self: center;
+        /* REMOVIDO order: -1; */
+    }
+    
+    /* Oculta o menu de navegação por padrão em telas pequenas */
+    nav {
+        flex-direction: column;
+        width: 100%;
+        background-color: #007f48;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+
+    /* Mostra o menu quando a classe 'show' é adicionada pelo JS */
+    header nav.show {
+        max-height: 500px; 
+        transition: max-height 0.4s ease-in; 
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 12px 0; 
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav ul li a {
+        padding: 0;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    main section {
+        padding: 1.5rem;
+    }
+
+    main section:first-child h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    main section:first-child > article {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    main section:first-child > article > article:first-child {
+        justify-content: center;
+    }
+
+    main section:first-child label img {
+        width: 100px;
+    }
+
+    main section:nth-child(2) h2,
+    main section:nth-child(3) h2 {
+        font-size: 1.5rem;
+    }
+
+    main section:nth-child(3) ol li {
+        font-size: 1rem;
+    }
+}

@@ -1,268 +1,280 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
-  background-color: #F0F3FF;
-  color: #333;
-  line-height: 1.6;
-  padding-top: 100px;
+    background-color: #F0F3FF;
+    color: #333;
+    line-height: 1.6;
+    /* Ajustado para compensar o padding do cabeçalho fixo */
+    padding-top: 120px; 
+    overflow-x: hidden;
 }
 
 /* ---------- CABEÇALHO ---------- */
 .header-principal {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #007F48;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #007F48;
+    /* Aumentado o padding para dar mais altura ao menu, como combinado */
+    padding: 10px 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1000;
 }
 
 .logo img {
-  height: 100px;
-  width: auto;
-  transition: transform 0.3s ease-in-out;
+    height: 100px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 .logo img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-/* Ícone hamburguer */
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1100;
-}
-
-.menu-icon span {
-  background-color: white;
-  height: 4px;
-  width: 25px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+/* Ícone hamburguer - Usando o estilo simples de Products */
+.menu-toggle {
+    display: none; /* Esconde no desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
 }
 
 /* Navbar */
-.navbar .menu-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-links li a {
-  text-decoration: none;
-  color: #F0F3FF;
-  font-weight: bold;
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: #F0F3FF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Adicionado padding para aumentar a área clicável dos links */
+    padding: 8px 10px; 
+    display: inline-block;
 }
 
 .menu-links li a:hover {
-  color: #FFD700;
+    color: #FFD700;
 }
 
 /* ---------- CONTEÚDO PRINCIPAL ---------- */
 .banner-principal {
-  background-color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .img-produto-banner {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
 .banner-principal h2 {
-  font-size: 1.8rem;
-  color: #007F48;
+    font-size: 1.8rem;
+    color: #007F48;
 }
 
 .banner-secundario {
-  background-color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .mensagem-destaque-faixa h2 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color: #007F48;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #007F48;
 }
 
 .vantagens-grade {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .vantagem-item {
-  text-align: center;
-  max-width: 280px;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+    text-align: center;
+    max-width: 280px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .vantagem-item:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .vantagem-item img {
-  width: 140px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .vantagem-item img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .vantagem-item h3 {
-  font-size: 1.1rem;
-  color: #007F48;
-  margin-top: 12px;
+    font-size: 1.1rem;
+    color: #007F48;
+    margin-top: 12px;
 }
 
 /* ---------- PRODUTOS ---------- */
 .produtos-destaque {
-  background-color: #F0F3FF;
-  padding: 40px 20px;
-  text-align: center;
+    background-color: #F0F3FF;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .produtos-destaque h2 {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #007F48;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #007F48;
 }
 
 .grade-catalogo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
 }
 
 .cartao-produto-link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .cartao-produto {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 320px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 320px;
 }
 
 .cartao-produto:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .cartao-produto img {
-  width: 220px;
-  height: 220px;
-  object-fit: contain;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
 }
 
 .cartao-produto:hover img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .cartao-produto h3 {
-  font-size: 1.2rem;
-  color: #007F48;
-  text-align: center;
+    font-size: 1.2rem;
+    color: #007F48;
+    text-align: center;
 }
 
 
 footer {
-  background-color: #007F48;
-  color: #F0F3FF;
-  text-align: center;
-  padding: 20px;
-  font-style: italic;
-  margin-top: 50px;
+    background-color: #007F48;
+    color: #F0F3FF;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    margin-top: 50px;
 }
 
+/* REGRAS PARA TELAS MENORES QUE 768px (TABLET/CELULAR) - Menu de Produtos IDÊNTICO */
 @media (max-width: 768px) {
-  .menu-icon {
-    display: flex;
-  }
+    .header-principal {
+        /* Permite que o logo e o botão de menu fiquem na mesma linha */
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Mostra o ícone do menu hambúrguer */
+    .menu-toggle {
+        display: block; 
+    }
 
-  .navbar {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #007F48;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    padding: 20px 0;
-  }
+    /* Oculta o menu de navegação por padrão em telas pequenas */
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        background-color: #007F48;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out; /* animação suave para fechar */
+        position: absolute; /* Para que ele caia por baixo do cabeçalho */
+        top: 100%;
+        left: 0;
+    }
+    
+    /* Mostra o menu quando a classe 'show' é adicionada pelo JS */
+    header nav.show {
+        max-height: 300px; /* altura suficiente para os itens */
+        transition: max-height 0.4s ease-in; /* animação suave para abrir */
+    }
+    
+    /* Oculta os estilos originais do seu menu X caso estivessem ativados */
+    .menu-icon {
+        display: none;
+    }
 
-  .navbar.ativo {
-    display: flex;
-    animation: fadeIn 0.3s ease;
-  }
+    /* Regras para os links do menu (mantendo o tamanho maior) */
+    .menu-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .menu-links li {
+        padding: 12px 0; /* Aumentado de 10px para 12px */
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        width: 100%;
+    }
+    
+    .menu-links li a {
+        padding: 0;
+    }
 
-  .navbar .menu-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+    /* Outros ajustes de responsividade da sua home */
+    .vantagens-grade {
+        gap: 20px;
+    }
 
-  .menu-icon.ativo span:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-  }
-  .menu-icon.ativo span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-icon.ativo span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
-  }
+    .vantagem-item img {
+        width: 120px;
+    }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .header-principal {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .vantagens-grade {
-    gap: 20px;
-  }
-
-  .vantagem-item img {
-    width: 120px;
-  }
-
-  .cartao-produto img {
-    width: 180px;
-    height: 180px;
-  }
+    .cartao-produto img {
+        width: 180px;
+        height: 180px;
+    }
 }

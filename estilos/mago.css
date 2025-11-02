@@ -1,16 +1,21 @@
-
+/* Reset e fonte */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  /* PADRÃO: Usando 'Inter' como fonte principal */
+  font-family: 'Inter', "Segoe UI", Arial, sans-serif;
 }
 
 body.corpo-pagina {
   background-color: #F0F3FF;
   color: #333;
   line-height: 1.7;
-  padding-top: 100px;
+  padding-top: 110px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -22,37 +27,19 @@ body.corpo-pagina {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 20px;
   z-index: 1000;
 }
 
 .logo-imagem {
-  height: 80px;
+  height: 90px;
   transition: transform 0.3s ease-in-out;
 }
 .logo-imagem:hover {
   transform: scale(1.05);
 }
 
-/* Menu */
-.menu-navegacao .lista-menu {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.link-menu {
-  text-decoration: none;
-  color: #F0F3FF;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-.link-menu:hover {
-  color: #FFD700;
-}
-
-/* Menu hambúrguer */
+/* Menu Hamburguer */
 .hamburguer {
   display: none;
   flex-direction: column;
@@ -67,10 +54,12 @@ body.corpo-pagina {
   width: 100%;
   background-color: #F0F3FF;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
+
+/* Animação do hamburguer */
 .hamburguer.ativo span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 5px); 
 }
 .hamburguer.ativo span:nth-child(2) {
   opacity: 0;
@@ -79,29 +68,34 @@ body.corpo-pagina {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Menu aberto mobile */
-.menu-navegacao.aberto {
+/* Navegação Desktop */
+.menu-navegacao .lista-menu {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: #007F48;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  padding: 20px 0;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
-.menu-navegacao.aberto .lista-menu {
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
+
+.link-menu {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  padding: 8px 10px;
+  display: inline-block;
+}
+.link-menu:hover {
+  color: #FFD700;
 }
 
 /* Conteúdo principal */
 .conteudo-principal {
-  width: 90%;
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 30px 20px;
 }
 
 /* Produto */
@@ -255,32 +249,91 @@ body.corpo-pagina {
   font-size: 15px;
   margin-top: 60px;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  width: 100%;
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
   .cabecalho {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px;
   }
+
   .logo-imagem {
-      height: 60px;
+    height: 70px;
   }
-  .menu-navegacao {
-      display: none;
-  }
+
   .hamburguer {
-      display: flex;
+    display: flex;
   }
+
+  .menu-navegacao { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #007F48;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    z-index: 999;
+  }
+
+  .menu-navegacao.aberto {
+    max-height: 500px;
+    transition: max-height 0.4s ease-in;
+  }
+
+  .menu-navegacao .lista-menu {
+    padding: 10px 0;
+  }
+
+  .lista-menu .item-menu {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 0;
+  }
+
+  .link-menu {
+    padding: 0;
+  }
+
+  .conteudo-principal {
+    padding: 30px 15px;
+    width: 100%;
+  }
+
   .opcoes-variacao {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
   }
+
+  .label-variacao {
+    width: auto;
+    max-width: 100px;
+  }
+
   .label-variacao img {
-      width: 140px;
+    width: 100px;
   }
+
+  .secao-compra {
+    padding: 20px;
+  }
+
   .botao-comprar {
-      width: 100%;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .descricao-produto {
+    padding: 20px;
+  }
+
+  .instrucoes-uso {
+    padding: 20px;
   }
 }

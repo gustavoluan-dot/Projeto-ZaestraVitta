@@ -3,128 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mago MULTI-USO: a eficácia que voce espera na limpeza</title>
+    <title>Mago MULTI-USO: a eficácia que você espera na limpeza</title>
     <link rel="shortcut icon" href="./imagens/icone-zaestravitta.png" type="image/x-icon">
     <link rel="stylesheet" href="estilos/mago.css">
 </head>
-<body>
 
-    <header>
-        <a href="home.html"><img src="imagens/icone-zaestravitta1.png" alt="Logo ZaestraVitta"></a>
+<body class="corpo-pagina">
 
-         <div class="menu-icon" id="menu-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-        </div>
-        
-            <nav>
+<header class="cabecalho">
+    <a href="home.html" class="logo-link">
+        <img src="imagens/icone-zaestravitta1.png" alt="Logo ZaestraVitta" class="logo-imagem">
+    </a>
 
-            <ul>
-                <li><a href="home.html" target="_self">INÍCIO</a></li>
-                <li><a href="produtos.html" target="_self">NOSSOS PRODUTOS</a></li>
-                <li><a href="sobre.html" target="_self">SOBRE NÓS</a></li>
-                <li><a href="contato.html" target="_self">ENTRE EM CONTATO</a></li>
-                <li><a href="videos.html" target="_self">VÍDEOS APLICANDO</a></li>
-                
-
-            </ul>
-    </header>
-
-
-    <main>
-
-        <section>
-            
-            <article>
-                <h1>MAGO MULTI-USO (5 EM 1) - ZAESTRAVITTA</h1>
-            </article>
-
-            <article>
-
-                <div>
-
-                    <input type="radio" id="mago-anti" name="mago-variacao" value="antibac">
-
-                    <label for="mago-anti">
-                        <img src="imagens/mago-01.png" alt="Produto ZaestraVitta Mago Multiuso antibacterial"> 
-                    </label> 
-                    
-                    <input type="radio" id="mago-cuidado" name="mago-variacao" value="cuidado">
-
-                    <label for="mago-cuidado">
-                        <img src="imagens/magi-02.png" alt="Mago Multiuso Cuidado">
-                    </label>
-
-                    <input type="radio" id="mago-frag" name="mago-variacao" value="fragrancias">
-
-                    <label for="mago-frag">
-                        <img src="imagens/mago-03.png" alt="Mago Multiuso Fragrâncias">
-                    </label>
-
-                </div>
-
-            </article>
-
-        </section>
-
-        <section>
-
-
-            <article>
-
-                <label for="tamanho">Escolha o Volume:</label>
-
-                <select name="tamanho" id="tamanho">
-                    <option value="1L">1 Litro (R$ 14,99)</option>
-                    <option value="3L">3 Litros (R$ 44,99)</option>
-                    <option value="5L" selected >5 Litros (R$ 74,90)</option>
-                </select>
-
-            </article>
-
-            <article>
-                <a href="compra.html"><button>Clique aqui para comprar.</button></a>
-            </article>
-
-        </section>
-
-        <section>
-
-            <h2>O Super-Herói da Limpeza Diária</h2>
-
-            <article>
-
-                <p>O Mago Multi-Uso 5 em 1 da ZaestraVitta é o aliado da limpeza diária: uma única fórmula de alta perfomance que remove gordura, limpa vidros e desinfeta, garantindo praticidade e eficácia em toda a casa.</p>
-
-                <img src="imagens/imagem-selo-qualidade.png" alt="Icone referente a um selo de qualidade">
-
-            </article>
-
-            <article>
-                <h3>Domine a limpeza: Veja as intruções profissionais e o segredo para extrair a máxima perfomance do seu Mago Multi-Uso.</h3>
-
-                <ol>
-                    <li><b>Prepare a Solução:</b> Dílua 3 tampas (aproximadamente 60ml) do Mago Multi-Uso em 5 litros de água.</li>
-                    <li><b>Aplicação:</b> Aplique a solução com um pano ou esponja macia na superfície desejada (pisos, azulejos, bancadas, etc...)</li>
-                    <li><b>Limpar e Enxaguar:</b> Esfregue suavemente para remover a sujeira e, se necessário, passe um pano úmido para retirar o excesso. Não é necessário enxaguar em todos os casos.</li>
-                    <li><b>Finalizar: </b>Deixe secar naturalmente para um brilho sem manchas e um perfurme agradável.</li>
-                </ol>
-
-            </article>
-
-        </section>
-
-    </main>
-
+    <div class="hamburguer" id="menu-btn"> 
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     
-    <footer>
-        &copy; <i>Todos os direitos reservados - Pixelar</i>
-    </footer>
+    <nav class="menu-navegacao" id="menu-navegacao">
+        <ul class="lista-menu">
+            <li class="item-menu"><a href="home.html" target="_self" class="link-menu">INÍCIO</a></li>
+            <li class="item-menu"><a href="produtos.html" target="_self" class="link-menu">NOSSOS PRODUTOS</a></li>
+            <li class="item-menu"><a href="sobre.html" target="_self" class="link-menu">SOBRE NÓS</a></li>
+            <li class="item-menu"><a href="contato.html" target="_self" class="link-menu">ENTRE EM CONTATO</a></li>
+            <li class="item-menu"><a href="videos.html" target="_self" class="link-menu">VÍDEOS APLICANDO</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <script src="Js/mago.js"></script>
-  
+<main class="conteudo-principal">
+    <section class="secao-produto-variacoes">
+        <article class="titulo-produto-container">
+            <h1 class="titulo-produto">MAGO MULTI-USO (5 EM 1) - ZAESTRAVITTA</h1>
+        </article>
 
+        <article class="variacoes-produto">
+            <div class="opcoes-variacao">
+                <input type="radio" id="mago-anti" name="mago-variacao" value="antibac" class="input-radio-variacao">
+                <label for="mago-anti" class="label-variacao">
+                    <img src="imagens/mago-01.png" alt="Produto ZaestraVitta Mago Multiuso antibacterial" class="imagem-variacao"> 
+                </label> 
+
+                <input type="radio" id="mago-cuidado" name="mago-variacao" value="cuidado" class="input-radio-variacao">
+                <label for="mago-cuidado" class="label-variacao">
+                    <img src="imagens/magi-02.png" alt="Mago Multiuso Cuidado" class="imagem-variacao">
+                </label>
+
+                <input type="radio" id="mago-frag" name="mago-variacao" value="fragrancias" class="input-radio-variacao">
+                <label for="mago-frag" class="label-variacao">
+                    <img src="imagens/mago-03.png" alt="Mago Multiuso Fragrâncias" class="imagem-variacao">
+                </label>
+            </div>
+        </article>
+    </section>
+
+    <section class="secao-compra">
+        <article class="opcoes-compra">
+            <label for="tamanho" class="label-tamanho">Escolha o Volume:</label>
+            <select name="tamanho" id="tamanho" class="select-tamanho">
+                <option value="1L" class="opcao-tamanho">1 Litro (R$ 14,99)</option>
+                <option value="3L" class="opcao-tamanho">3 Litros (R$ 44,99)</option>
+                <option value="5L" selected class="opcao-tamanho">5 Litros (R$ 74,90)</option>
+            </select>
+        </article>
+
+        <article class="container-botao-compra">
+            <a href="compra.html" class="link-botao-compra">
+                <button class="botao-comprar">Clique aqui para comprar.</button>
+            </a>
+        </article>
+    </section>
+
+    <section class="secao-detalhes">
+        <h2 class="titulo-detalhes">O Super-Herói da Limpeza Diária</h2>
+
+        <article class="descricao-produto">
+            <p class="paragrafo-descricao">
+                O Mago Multi-Uso 5 em 1 da ZaestraVitta é o aliado da limpeza diária: uma única fórmula de alta performance que remove gordura, limpa vidros e desinfeta, garantindo praticidade e eficácia em toda a casa.
+            </p>
+            <img src="imagens/imagem-selo-qualidade.png" alt="Ícone de selo de qualidade" class="selo-qualidade">
+        </article>
+
+        <article class="instrucoes-uso">
+            <h3 class="titulo-instrucoes">
+                Domine a limpeza: Veja as instruções profissionais e o segredo para extrair a máxima performance do seu Mago Multi-Uso.
+            </h3>
+            <ol class="lista-instrucoes">
+                <li class="item-instrucao"><b>Prepare a Solução:</b> Dilua 3 tampas (aprox. 60ml) do Mago Multi-Uso em 5 litros de água.</li>
+                <li class="item-instrucao"><b>Aplicação:</b> Aplique a solução com um pano ou esponja macia na superfície desejada.</li>
+                <li class="item-instrucao"><b>Limpar e Enxaguar:</b> Esfregue suavemente para remover sujeira. Se necessário, passe um pano úmido.</li>
+                <li class="item-instrucao"><b>Finalizar:</b> Deixe secar naturalmente para um brilho sem manchas e perfume agradável.</li>
+            </ol>
+        </article>
+    </section>
+</main>
+
+<footer class="rodape">
+    <p class="texto-rodape">&copy; <i>Todos os direitos reservados - Pixelar</i></p>
+</footer>
+
+<script src="Js/mago.js"></script>
 
 </body>
 </html>
