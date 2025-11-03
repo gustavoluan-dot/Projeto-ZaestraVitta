@@ -1,0 +1,65 @@
+Curso: ADS/Ciências da computação
+Disciplina: front-end
+Professor: Paulo henrique
+Integrantes do grupo: Rubens da silva, Gustavo luan, Vitor yuji, Matheus, Pedro, Karina
+Grupo: Pixelar
+Aluno responsável por este diário: Rubens da silva
+Período de realização: 22/08/25 á 03/11/25
+Título do projeto: Zaestravita - Venda de produtos de limpeza
+Este diário de bordo tem como objetivo registrar o processo de desenvolvimento de um site com 10 páginas, utilizando as linguagens HTML e CSS, como parte da disciplina de front-end.
+O trabalho foi realizado em grupo, dividido entre sete integrantes, onde cada participante ficou responsável pela criação e estilização de determinadas páginas. Além da construção individual, o grupo trabalhou em conjunto para manter um padrão visual, estrutural e de navegação entre as páginas.
+
+Data: 27/08/25
+Atividades realizadas:
+Reunião inicial do grupo para definição do tema do site e divisão das páginas.
+Escolhemos fazer o site da empresa do pai de um integrande do grupo, a Zaestravita, que vende produtos de limpeza.
+Cada integrante ficará responsável por criar páginas específicas.
+Reflexões:
+Foi importante definir um padrão para evitar diferenças de design entre as páginas. Decidimos usar as mesmas cores, fontes e layout base.
+
+Data: 29/08/25
+Atividades realizadas:
+Em sala, dividimos o projeto em partes iguais para que cada integrante faça pelo menos uma pagina do html.
+Dificuldades encontradas:
+A principio foi dificil encaixar o projeto na rotina de trabalho e estudos dos integrantes do grupo pensando em não sobrecarregar o pessoal.
+Próximos passos:
+iniciar o desenvolvimento.
+Data: 11/09/25
+Atividades realizadas:
+Todas as paginas html finalizadas, integradas e linkadas umas as outras cumprindo os requisitos pedidos pelo professor.
+Dificuldades encontradas:
+Um dos membros do grupo não demosntrou interesse em fazer sua parte, assim ficando para outro fazer.
+
+Data: 13/09/25
+Atividades realizadas:
+A 1ª entrega foi realizada com o html do site completo. Avaliamos o site de outro grupo e também fomos avaliados.
+Aprendizados:
+Nossas páginas tinham apenas um link entre elas, a home, era sempre necessário voltar a home antes de ir a outra pagina.
+Próximos passos:
+Criar uma barra de navegação integrando todas as páginas do site. Aplicar o css nas páginas html.
+
+Data: 20/09/25
+Atividades realizadas:
+Cada integrante começa a aplicar o css nas páginas html que criou.
+Dificuldades encontradas:
+fixar rodapé, estilização da barra de navegação, tamanho dos elementos, responsividade para aparelhos menores.
+
+Data: 26/09/25
+Atividades realizadas:
+Orçamento de dominio e hospedagem do site, foi orçado em 3 plataformas diferentes onde optamos pela Hostinger.
+Após breve reunião decidimos remover um integrante do grupo. Mesmo sendo chamado diversas vezes, ele não demonstrou interesse nenhum no projeto ou mesmo no curso em si. 
+
+Data: 01/11/25
+Atividades realizadas:
+Finalização do CSS. Integração de todas as paginas para finalização do projeto.
+Dificuldades encontradas:
+Encontramos alguns erros de layout e link durante a integração de todo o trabalho.
+Próximos passos:
+Preparar para entrega e apresentação no dia 03/11/25.
+
+Conclusão
+O desenvolvimento deste projeto permitiu colocar em prática os conhecimentos de html e css, além de reforçar habilidades de trabalho em equipe, organização e padrão de código.
+Durante o processo, aprendi a resolver problemas de alinhamento, estrutura e estilo, entendendo melhor como cada propriedade CSS afeta o layout. Também percebi a importância da comunicação e da padronização entre os membros do grupo para alcançar um resultado visual coeso.
+O projeto foi finalizado com sucesso, e o site ficou funcional, visualmente agradável e bem estruturado.
+
+https://github.com/gustavoluan-dot/Projeto-ZaestraVitta
